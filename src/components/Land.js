@@ -18,7 +18,7 @@ function Land() {
 
       <Link to="/login" className={styles.link}>
         <span className={styles.butt} onClick={mix}>
-          Get Started
+          Get Started with me again
         </span>
       </Link>
 
