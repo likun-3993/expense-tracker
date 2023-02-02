@@ -1,0 +1,16 @@
+.formBody{
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    padding:5px ;
+    background-color: #FFEE63;
+    
+}
+
+.content{
+    padding:5px;
+    justify-content:flex-start ;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: large;
+}

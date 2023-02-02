@@ -1,0 +1,23 @@
+.butt {
+    /* padding: 10px; */
+    border-radius: 8px;
+    color: antiquewhite;
+    background-color: black;
+    height: 20px;
+    width: auto;
+    padding: 3px
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    margin-top: 15px;
+    text-decoration: none;
+
+}

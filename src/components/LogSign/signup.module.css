@@ -1,0 +1,75 @@
+.text {
+    width: 300px;
+    height: 15px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    padding: 5px 4px
+}
+
+.body {
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.button {
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 2px;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button:hover {
+    width: 120px;
+    cursor: pointer;
+    background-color: bisque;
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.head {
+    width: 100px;
+}
+
+.marker {
+    align-self: flex-start;
+}
+
+h1 {
+    font-size: 120px;
+    position: absolute;
+    top: 10px;
+    margin: 10px 0;
+}
+
+.link {
+    /* margin-top: 15px; */
+    text-decoration: none;
+    color: black
+}
+
+.log {
+    padding: 5px;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}

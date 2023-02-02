@@ -1,0 +1,19 @@
+.header {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link {
+    /* margin-top: 15px; */
+    text-decoration: none;
+    color: white;
+    position: sticky;
+}
+
+.log {
+    padding: 5px;
+    border-radius: 4px;
+    background-color: black;
+}
