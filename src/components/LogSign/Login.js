@@ -13,6 +13,11 @@ function Login() {
   };
   useEffect(logPage, []);
   // useEffect(() => window.analytics.page("Login Page"),[]);
+
+  const logIdentity = (email) => {
+    window.analytics.identity(email);
+  };
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -65,7 +70,13 @@ function Login() {
           value={password}
           onChange={handlePassword}
         />
-        <div className={styles.button} onClick={mix}>
+        <div
+          className={styles.button}
+          onClick={() => {
+            // mix();
+            logIdentity();
+          }}
+        >
           {check && (
             <Link to="/landing" className={styles.link} state={{ id: email }}>
               Login
