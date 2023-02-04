@@ -8,7 +8,7 @@ mixpanel.init("482c01866039108cf537c05102ef18d3", {
 });
 
 const Segment = () => {
-  analytics.track("segment test event", {
+  window.analytics.track("segment test event", {
     title: "tracking call from segment",
     industry: "Computer Science",
   });
