@@ -15,7 +15,7 @@ function Login() {
   // useEffect(() => window.analytics.page("Login Page"),[]);
 
   const logIdentity = (email) => {
-    window.analytics.identity(email);
+    window.analytics.identify(email);
   };
 
   const [email, setEmail] = useState("");
@@ -74,7 +74,7 @@ function Login() {
           className={styles.button}
           onClick={() => {
             // mix();
-            logIdentity();
+            logIdentity(email);
           }}
         >
           {check && (
