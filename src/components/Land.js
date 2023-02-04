@@ -15,7 +15,10 @@ const Segment = () => {
 };
 
 function Land() {
-  useEffect(() => window.analytics.page("Land Page"));
+  const lPage = () => {
+    window.analytics.page("Land Page");
+  };
+  useEffect(lPage, []);
   const mix = () => {
     mixpanel.track("Land page");
   };

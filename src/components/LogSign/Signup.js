@@ -4,7 +4,11 @@ import { Outlet, Link } from "react-router-dom";
 import styles from "./signup.module.css";
 
 function Signup() {
-  useEffect(() => window.analytics.page("Signup Page"));
+  const signPage = () => {
+    window.analytics.track("Signup Page");
+  };
+  useEffect(signPage, []);
+  // useEffect(() => window.analytics.page("Signup Page"),[]);
 
   const [email, setEmail] = useState("");
   const [fName, setFName] = useState("");

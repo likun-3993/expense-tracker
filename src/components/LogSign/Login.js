@@ -8,7 +8,11 @@ mixpanel.init("482c01866039108cf537c05102ef18d3", {
 });
 
 function Login() {
-  useEffect(() => window.analytics.page("Login Page"));
+  const logPage = () => {
+    window.analytics.track("Login Page");
+  };
+  useEffect(logPage, []);
+  // useEffect(() => window.analytics.page("Login Page"),[]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
