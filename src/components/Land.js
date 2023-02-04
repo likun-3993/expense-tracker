@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mixpanel from "mixpanel-browser";
 import { Outlet, Link } from "react-router-dom";
 import styles from "./Land.module.css";
@@ -15,6 +15,7 @@ const Segment = () => {
 };
 
 function Land() {
+  useEffect(() => window.analytics.page("Land Page"));
   const mix = () => {
     mixpanel.track("Land page");
   };
