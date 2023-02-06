@@ -17,13 +17,17 @@ function Main({ receiver, update }) {
     mixpanel.reset();
   };
 
+  const mainEvent = () => {
+    window.analytics.track("segment_LOG OUT");
+  };
+
   // console.log(id);
 
   return (
     <div>
       <div className={styles.header}>
         <Link to="/" className={styles.link}>
-          <span className={styles.log} onClick={mix}>
+          <span className={styles.log} onClick={mainEvent}>
             Logout
           </span>
         </Link>

@@ -8,17 +8,10 @@ mixpanel.init("482c01866039108cf537c05102ef18d3", {
 });
 
 const Segment = () => {
-  window.analytics.track("segment test event", {
-    title: "tracking call from segment",
-    industry: "Computer Science",
-  });
+  window.analytics.track("segment_Land Page");
 };
 
 function Land() {
-  const lPage = () => {
-    window.analytics.page("Land Page");
-  };
-  useEffect(lPage, []);
   const mix = () => {
     mixpanel.track("Land page");
   };
@@ -26,13 +19,9 @@ function Land() {
   return (
     <div className={styles.container}>
       <div>Welcome to Personal Expense Tracker</div>
-
       <Link to="/login" className={styles.link}>
-        <span className={styles.butt} onClick={mix}>
-          Get Started with me again
-        </span>
         <span className={styles.butt} onClick={Segment}>
-          Get Started segent data
+          Get Started
         </span>
       </Link>
 

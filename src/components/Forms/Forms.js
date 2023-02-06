@@ -22,6 +22,14 @@ let Forms = (props) => {
     });
   };
 
+  const formData = () => {
+    window.analytics.track("segment_Expenses", {
+      title: formTitle,
+      date: formDate,
+      amount: formAmount,
+    });
+  };
+
   let saveTitle = (event) => {
     setTitle(event.target.value);
   };
@@ -66,7 +74,7 @@ let Forms = (props) => {
           <input type="number" value={formAmount} onChange={saveAmount} />
           <br />
         </div>
-        <button type="submit" onClick={mix}>
+        <button type="submit" onClick={formData}>
           Add to Expenses
         </button>
       </form>

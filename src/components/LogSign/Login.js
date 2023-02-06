@@ -8,14 +8,9 @@ mixpanel.init("482c01866039108cf537c05102ef18d3", {
 });
 
 function Login() {
-  const logPage = () => {
-    window.analytics.track("Login Page");
-  };
-  useEffect(logPage, []);
-  // useEffect(() => window.analytics.page("Login Page"),[]);
-
   const logIdentity = (email) => {
     window.analytics.identify(email);
+    window.analytics.track("segment_LOG IN");
   };
 
   const [email, setEmail] = useState("");
@@ -73,7 +68,6 @@ function Login() {
         <div
           className={styles.button}
           onClick={() => {
-            // mix();
             logIdentity(email);
           }}
         >

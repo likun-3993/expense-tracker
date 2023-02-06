@@ -4,11 +4,10 @@ import { Outlet, Link } from "react-router-dom";
 import styles from "./signup.module.css";
 
 function Signup() {
-  const signPage = () => {
-    window.analytics.track("Signup Page");
+  const signPage = (em) => {
+    window.analytics.alias(em);
+    window.analytics.track("segment_Signup Page");
   };
-  useEffect(signPage, []);
-  // useEffect(() => window.analytics.page("Signup Page"),[]);
 
   const [email, setEmail] = useState("");
   const [fName, setFName] = useState("");
@@ -109,7 +108,7 @@ function Signup() {
           value={password}
           onChange={handlePassword}
         />
-        <div className={styles.button} onClick={mix}>
+        <div className={styles.button} onClick={() => signPage(email)}>
           {check && (
             <Link to="/landing" state={{ id: email }} className={styles.link}>
               Signup
